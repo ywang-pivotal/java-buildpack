@@ -14,23 +14,30 @@
 # limitations under the License.
 
 # Configuration for the Tomcat container
+# ---
+#tomcat:
+#  version: 8.0.+
+#  repository_root: "{default.repository.root}/tomcat"
+#lifecycle_support:
+#  version: 2.+
+#  repository_root: "{default.repository.root}/tomcat-lifecycle-support"
+#logging_support:
+#  version: 2.+
+#  repository_root: "{default.repository.root}/tomcat-logging-support"
+#access_logging_support:
+#  version: 2.+
+#  repository_root: "{default.repository.root}/tomcat-access-logging-support"
+#  access_logging: disabled
+#redis_store:
+#  version: 1.+
+#  repository_root: "{default.repository.root}/redis-store"
+#  database: 0
+#  timeout: 2000
+#  connection_pool_size: 2
+
 ---
-tomcat:
-  version: 8.0.+
-  repository_root: "{default.repository.root}/tomcat"
-lifecycle_support:
-  version: 2.+
-  repository_root: "{default.repository.root}/tomcat-lifecycle-support"
-logging_support:
-  version: 2.+
-  repository_root: "{default.repository.root}/tomcat-logging-support"
-access_logging_support:
-  version: 2.+
-  repository_root: "{default.repository.root}/tomcat-access-logging-support"
-  access_logging: disabled
-redis_store:
-  version: 1.+
-  repository_root: "{default.repository.root}/redis-store"
-  database: 0
-  timeout: 2000
-  connection_pool_size: 2
+version: 7.0.+
+repository_root: "http://download.pivotal.io.s3.amazonaws.com/tomcat"
+support:
+  version: 1.1.+
+  repository_root: "http://download.pivotal.io.s3.amazonaws.com/tomcat-buildpack-support"
